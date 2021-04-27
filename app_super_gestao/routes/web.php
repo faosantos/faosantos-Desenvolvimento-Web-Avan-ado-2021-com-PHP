@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* 
+    primeiro exemplo de como fazer uma rota;
 Route::get('/', function () {
     return 'Olá, seja bem vindo ao curso!';
-});
+}); 
 
 Route::get('/sobre-nos', function () {
     return 'Sobre nós';
@@ -23,4 +25,10 @@ Route::get('/sobre-nos', function () {
 
 Route::get('/contato', function () {
     return 'Contato';
-});
+});*/
+
+Route::get('/', 'PrincipalController@principal');
+
+Route::get('/sobre-nos', 'SobreNosController@sobreNos');
+
+Route::get('/contato', 'ContatoController@contato');
