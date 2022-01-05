@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return 'Olá, seja bem vindo ao curso!';
 }); 
-
+ 
 Route::get('/sobre-nos', function () {
     return 'Sobre nós';
 });
@@ -29,7 +29,9 @@ Route::get('/contato', function () {
 
 Route::get('/', 'PrincipalController@principal')->name('site.index');
 Route::get('/sobre-nos', 'SobreNosController@sobreNos')->name('site.sobrenos');
-Route::get('/contato', 'ContatoController@contato')->name('site.contato');
+Route::get('/contato', 'ContatoController@contato')->name('site.contato'); //metodo GET
+Route::post('/contato', 'ContatoController@contato')->name('site.contato'); //metodo POST
+
 
 Route::get('/login', function (){ return 'Login'; })->name('site.login');
 
